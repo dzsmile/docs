@@ -1,0 +1,28 @@
+### 1. 提交 LivePortrait 生成任务
+POST https://dashscope.aliyuncs.com/api/v1/services/aigc/image2video/video-synthesis/
+X-DashScope-Async: enable
+Authorization: Bearer sk-413cade8f87a44e2a3752b0224f16c85
+Content-Type: application/json
+
+{
+  "model": "liveportrait",
+  "input": {
+    "image_url": "https://help-static-aliyun-doc.aliyuncs.com/file-manage-files/zh-CN/20250911/ynhjrg/p874909.png",
+    "audio_url": "https://help-static-aliyun-doc.aliyuncs.com/file-manage-files/zh-CN/20250911/mbeygv/%E7%B4%A0%E6%8F%8F%E7%94%B7%E5%AD%A9.mp3"
+  },
+  "parameters": {
+    "template_id": "normal",
+    "eye_move_freq": 0.5,
+    "video_fps": 30,
+    "mouth_move_strength": 1,
+    "paste_back": true,
+    "head_move_strength": 0.7
+  }
+}
+
+> {%
+    // 自动将返回的任务 ID 存入变量，方便第二步使用
+    client.global.set("task_id", response.body.output.task_id);
+%}
+
+<> 2026-01-29T221009.200.json

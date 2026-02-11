@@ -1,17 +1,22 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mint Starter Kit",
+  "name": "AxisFI",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#06B6D4",
+    "light": "#06B6D4",
+    "dark": "#06B6D4"
   },
-  "favicon": "/favicon.svg",
+  "api": {
+    "baseUrl": "http://127.0.0.1:8083/",
+    "input": "openapi.json",
+    "generate": true
+  },
+  "favicon": "/favicon.png",
   "navigation": {
     "tabs": [
       {
-        "tab": "Guides",
+        "tab": "Home",
         "groups": [
           {
             "group": "Getting started",
@@ -36,33 +41,21 @@
               "essentials/images",
               "essentials/reusable-snippets"
             ]
-          },
-          {
-            "group": "AI tools",
-            "pages": [
-              "ai-tools/cursor",
-              "ai-tools/claude-code",
-              "ai-tools/windsurf"
-            ]
           }
         ]
       },
       {
         "tab": "API reference",
+        "openapi": "openapi.json"
+      },
+      {
+        "tab": "Changelog",
         "groups": [
           {
-            "group": "API documentation",
+            "group": "Accounts",
             "pages": [
-              "api-reference/introduction"
-            ]
-          },
-          {
-            "group": "Endpoint examples",
-            "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
+              "api-reference/account/add-bank-account",
+              "api-reference/account/add-crypto-wallet"
             ]
           }
         ]
@@ -84,8 +77,8 @@
     }
   },
   "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    "light": "/logo/axisfi.png",
+    "dark": "/logo/axisfi.png"
   },
   "navbar": {
     "links": [
@@ -102,15 +95,15 @@
   },
   "contextual": {
     "options": [
-     "copy",
-     "view",
-     "chatgpt",
-     "claude",
-     "perplexity",
-     "mcp",
-     "cursor",
-     "vscode"
-   ]
+      "copy",
+      "view",
+      "chatgpt",
+      "claude",
+      "perplexity",
+      "mcp",
+      "cursor",
+      "vscode"
+    ]
   },
   "footer": {
     "socials": {
