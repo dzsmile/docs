@@ -46,7 +46,67 @@
       },
       {
         "tab": "API reference",
-        "openapi": "openapi.json"
+        "openapi": "openapi.json",
+        "groups": [
+          {
+            "group": "Wallets",
+            "pages": [
+              "GET /api/wallets"
+            ]
+          },{
+            "group": "Balances",
+            "pages": [
+              "GET /api/balances"
+            ]
+          },{
+            "group": "Deposit",
+            "pages": [
+              "POST /api/deposit/create"
+            ]
+          },{
+            "group": "Quotes",
+            "pages": [
+              "POST /api/fx/quotes"
+            ]
+          },{
+            "group": "Transfer",
+            "pages": [
+              "POST /api/transfer/create"
+            ]
+          },
+          {
+            "group": "Customers",
+            "pages": [
+              "POST /api/customers/create",
+              "GET /api/customers/detail",
+              "POST /api/customers/{customer_id}/update",
+              "POST /api/customers/{customer_id}/delete"
+            ]
+          },
+          {
+            "group": "Recipients",
+            "pages": [
+              "POST /api/recipients/create",
+              "GET /api/recipients/detail",
+              "POST /api/recipients/{recipient_id}/update",
+              "POST /api/recipients/{recipient_id}/delete"
+            ]
+          },
+          {
+            "group": "Transactions",
+            "pages": [
+              "GET /api/transactions",
+              "GET /api/transactions/detail"
+            ]
+          },
+          {
+            "group": "Files",
+            "pages": [
+              "POST /api/files/upload",
+              "GET /api/files/download/{file_id}"
+            ]
+          }
+        ]
       },
       {
         "tab": "Changelog",
