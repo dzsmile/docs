@@ -23,8 +23,8 @@ Stay updated on the lifecycle of individual or batch transfers.
 
 | **Event** | **Description** |
 | --- | --- |
-| `transfer.Completed` | Triggered when the transfer is successfully completed and funds reach the destination. |
-| `transfer.Failed` | Triggered if a transfer is rejected due to insufficient funds or compliance issues. |
+| `transfer.completed` | Triggered when the transfer is successfully completed and funds reach the destination. |
+| `transfer.failed` | Triggered if a transfer is rejected due to insufficient funds or compliance issues. |
 
 **Payload examples**
 
@@ -175,8 +175,8 @@ Triggered when external funds are detected entering your wallet address
 
 | **Event** | **Description** |
 | --- | --- |
-| `deposit.Completed` | Triggered when the deposit is confirmed and added to your available balance. |
-| `deposit.Failed` | Triggered if a deposit is flagged or fails to settle. |
+| `deposit.completed` | Triggered when the deposit is confirmed and added to your available balance. |
+| `deposit.failed` | Triggered if a deposit is flagged or fails to settle. |
 
 **Payload examples**
 
@@ -185,14 +185,14 @@ The **data** object is the same as the response body of [Create Deposit](http
 ```json
 {
   "transaction_type": "deposit",
-  "partner_transaction_id": "<string>",
+  "partner_transaction_id": "3922F79e2EA7e551dF44BE81115",
   "network": "ETH",
   "account_currency": "USDT",
-  "amount": 123,
-  "transaction_id": "<string>",
-  "source_wallet_address": "<string>",
-  "target_wallet_address": "<string>",
-  "status": "<string>",
+  "amount": 99.99,
+  "transaction_id": "txn_ca72384ab1ce4ddda4d95bb090f30350",
+  "source_wallet_address": "0x0A4EBD7Ad3922F79e2EA7e551dF44BE81115eAE3",
+  "target_wallet_address": "0xdAcA9A62Cf0326F3b0DC010Df78f7F10B6b71c32",
+  "status": "completed",
   "created_at": "2023-11-07T05:31:56Z",
   "audit_at": "2023-11-07T05:31:56Z",
   "completed_at": "2023-11-07T05:31:56Z"
@@ -215,71 +215,72 @@ The **data** object is the same as the response body of [Create Customer](htt
 
 ```json
 {
-  "customer_id": "<string>",
-  "partner_customer_id": "<string>",
-  "status": "<string>",
-  "created_at": "2023-11-07T05:31:56Z",
+  "customer_id": "cus_e052d06117a549e2af5820cb3c74dc7f",
+  "partner_customer_id": "USER_2026_001",
+  "status": "active",
+  "created_at": "2026-04-02T08:30:00Z",
   "business_details": {
-    "business_name_english": "<string>",
-    "website": "<string>",
-    "business_identifier_type": "<string>",
-    "business_identifier_number": "<string>",
-    "business_name": "<string>",
-    "business_type": "<string>",
-    "business_identifier_country_code": "<string>",
-    "business_identifier_start_date": "2023-11-07T05:31:56Z",
-    "business_identifier_expiry_date": "2023-11-07T05:31:56Z",
+    "business_name_english": "AxisFI Solutions LLC",
+    "website": "https://axisfi.net",
+    "business_identifier_type": "Business Registration",
+    "business_identifier_number": "12-3456789",
+    "business_name": "AxisFI Solutions LLC",
+    "business_type": "Limited Liability Company",
+    "business_identifier_country_code": "US",
+    "business_identifier_start_date": "2020-05-12T00:00:00Z",
+    "business_identifier_expiry_date": "2040-05-11T00:00:00Z",
     "business_identifier_file_id_list": [
-      "<string>"
+      "doc_ein_verification_letter_001",
+      "doc_articles_of_organization_002"
     ]
   },
   "account_usage": {
-    "operating_country": "<string>",
-    "goods_service_description": "<string>",
-    "industry_category_code": "<string>",
-    "account_usage_product_reference": "<string>",
-    "estimated_monthly_revenue_currency": "<string>",
-    "estimated_monthly_revenue_amount": 123
+    "operating_country": "US",
+    "goods_service_description": "Financial Services.",
+    "industry_category_code": "5311",
+    "account_usage_product_reference": "Financial Services",
+    "estimated_monthly_revenue_currency": "USD",
+    "estimated_monthly_revenue_amount": 50000
   },
   "registration_address": {
-    "registration_address_line1": "<string>",
-    "registration_address_city": "<string>",
-    "registration_address_state": "<string>",
-    "registration_address_postcode": "<string>",
-    "registration_address_country_code": "<string>"
+    "registration_address_line1": "1209 Orange Street",
+    "registration_address_city": "Wilmington",
+    "registration_address_state": "DE",
+    "registration_address_postcode": "19801",
+    "registration_address_country_code": "US"
   },
   "primary_contact": {
-    "contact_phone": "<string>",
-    "contact_email": "<string>"
+    "contact_phone": "+8613800138000",
+    "contact_email": "derek@axisfi.test"
   },
   "business_person_list": [
     {
       "basic_info": {
-        "first_name_english": "<string>",
-        "last_name_english": "<string>",
-        "birth_date": "2023-11-07T05:31:56Z",
-        "nationality": "<string>",
-        "role_type": "<string>",
-        "first_name": "<string>",
-        "last_name": "<string>",
-        "contact_phone": "<string>",
-        "contact_email": "<string>"
+        "first_name_english": "James",
+        "last_name_english": "Miller",
+        "birth_date": "1988-03-22T00:00:00Z",
+        "nationality": "US",
+        "role_type": "CEO",
+        "first_name": "James",
+        "last_name": "Miller",
+        "contact_phone": "+12025550178",
+        "contact_email": "james.miller@axisfi.test"
       },
       "residential_address": {
-        "residential_address_line1": "<string>",
-        "residential_address_city": "<string>",
-        "residential_address_postcode": "<string>",
-        "residential_address_country_code": "<string>",
-        "residential_address_state": "<string>"
+        "residential_address_line1": "742 Evergreen Terrace",
+        "residential_address_city": "Springfield",
+        "residential_address_state": "IL",
+        "residential_address_postcode": "62704",
+        "residential_address_country_code": "US"
       },
       "identification": {
-        "id_type": "<string>",
-        "id_number": "<string>",
-        "id_issuing_country_code": "<string>",
-        "id_expiration_date": "2023-11-07T05:31:56Z",
-        "id_issue_date": "2023-11-07T05:31:56Z",
-        "id_document_front_file_id": "<string>",
-        "id_document_back_file_id": "<string>"
+        "id_type": "DRIVERS_LICENSE",
+        "id_number": "D123456789",
+        "id_issuing_country_code": "US",
+        "id_expiration_date": "2032-05-15T00:00:00Z",
+        "id_issue_date": "2022-05-15T00:00:00Z",
+        "id_document_front_file_id": "file_us_dl_front_882",
+        "id_document_back_file_id": "file_us_dl_back_882"
       }
     }
   ]
@@ -302,35 +303,35 @@ The **data** object is the same as the response body of [Create Recipient](ht
 
 ```json
 {
-  "name": "<string>",
-  "type": "<string>",
-  "website": "<string>",
-  "recipient_id": "<string>",
-  "partner_recipient_id": "<string>",
-  "status": "<string>",
-  "country_code": "<string>",
-  "created_at": "2023-11-07T05:31:56Z",
+  "name": "Global Logistics Solutions Inc",
+  "type": "enterprise",
+  "website": "https://globallogistics.test",
+  "recipient_id": "rec_9h2v6kLm4pX",
+  "partner_recipient_id": "VENDOR_LOGI_001",
+  "status": "active",
+  "country_code": "US",
+  "created_at": "2026-04-02T09:15:00Z",
   "address_info": {
-    "address_line_1": "<string>",
-    "address_line_2": "<string>",
-    "city": "<string>",
-    "state": "<string>",
-    "post_code": "<string>"
+    "address_line_1": "456 Commerce Way",
+    "address_line_2": "Suite 200",
+    "city": "Los Angeles",
+    "state": "CA",
+    "post_code": "90001"
   },
   "payment_details": {
     "account_type": "bank",
     "bank_name": "JPMorgan Chase",
     "network": "SWIFT",
     "payment_method": "INTERNATIONAL_WIRE",
-    "account_name": "<string>",
-    "account_number": "<string>",
-    "swift_code": "<string>",
+    "account_name": "Global Logistics Solutions Inc",
+    "account_number": "123456789012",
+    "swift_code": "CHASUS33",
     "account_currency": "USD",
     "country_code": "US",
-    "local_bank_code": "<string>"
+    "local_bank_code": "021000021"
   },
   "file_id_list": [
-    "<string>"
+    "doc_dc988a1d7dd04f78b24f2bbb20c8ebeb"
   ]
 }
 ```
