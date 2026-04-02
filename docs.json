@@ -2,7 +2,6 @@
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
   "name": "AxisFI",
-  "basePath": "/docs",
   "colors": {
     "primary": "#06B6D4",
     "light": "#06B6D4",
@@ -105,6 +104,12 @@
             "pages": [
               "POST /api/files/upload",
               "GET /api/files/download/{file_id}"
+            ]
+          },
+          {
+            "group": "Webhooks",
+            "pages": [
+              "api-reference/webhooks/overview"
             ]
           }
         ]
