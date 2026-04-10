@@ -102,8 +102,8 @@
     }
   },
   "logo": {
-    "light": "/logo/axisfi.png",
-    "dark": "https://www.axisfi.net/assets/08c9882fd8da744d80e3752420f0c75fac2e8677-LPf98P_g.png"
+    "light": "/images/axisfi.png",
+    "dark": "/images/axisfi.png"
   },
   "contextual": {
     "options": [
