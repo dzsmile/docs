@@ -8,7 +8,7 @@ AxisFI uses webhooks to notify your application when an event happens in your ac
 
 ### Security & Signature Verification
 
-To ensure that a request is genuinely sent by AxisFI, each webhook includes an `x-axisfi-signature` in the header.
+To ensure that a request is genuinely sent by AxisFI, each webhook includes an `X-Webhook-Signature` in the header.
 
 > **Best Practice:** We strongly recommend verifying the HMAC-SHA256 signature using your account's `Webhook Secret` before processing any data.
 >
@@ -63,7 +63,7 @@ The **data** object is the same as the response body of [Transfer](http://loc
     "business_details": {
       "business_name": "xxx Solutions LLC",
       "business_name_english": "xxx Solutions LLC",
-      "business_type": "Limited Liability Company,
+      "business_type": "Limited Liability Company",
       "website": "https://xxxx.com",
       "business_identifier_type": "Business Registration",
       "business_identifier_number": "12-3456789",
