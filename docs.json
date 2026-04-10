@@ -102,8 +102,8 @@
     }
   },
   "logo": {
-    "light": "/images/axisfi.png",
-    "dark": "/images/axisfi.png"
+    "light": "/images/axisfi-light.png",
+    "dark": "/images/axisfi-dark.png"
   },
   "contextual": {
     "options": [
