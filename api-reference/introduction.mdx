@@ -1,33 +1,26 @@
----
-title: 'Introduction'
-description: 'Example section for showcasing API endpoints'
----
+Get started with the Axisfi API
 
-<Note>
-  If you're not looking to build API reference documentation, you can delete
-  this section by removing the api-reference folder.
-</Note>
-
-## Welcome
-
-There are two ways to build API documentation: [OpenAPI](https://mintlify.com/docs/api-playground/openapi/setup) and [MDX components](https://mintlify.com/docs/api-playground/mdx/configuration). For the starter kit, we are using the following OpenAPI specification.
-
-<Card
-  title="Plant Store Endpoints"
-  icon="leaf"
-  href="https://github.com/mintlify/starter/blob/main/api-reference/openapi.json"
->
-  View the OpenAPI specification file
-</Card>
-
-## Authentication
-
-All API endpoints are authenticated using Bearer tokens and picked up from the specification file.
-
-```json
-"security": [
-  {
-    "bearerAuth": []
-  }
-]
-```
+​
+Axisfi API Reference
+Get started with our API.
+Open in Postman
+Fork our pre-configured collection with all API endpoints
+For setup instructions, see our Postman Collection Guide.
+Sandbox vs Production:
+This collection defaults to sandbox (https://sandbox-api.axisfi.net)
+To use production, change client_base_url to https://api.axisfi.net
+Always use separate API credentials for production
+Test thoroughly in sandbox before deploying to production
+​
+Base URLs
+Environment	URL
+Sandbox	https://sandbox-api.axisfi.financial
+Production	https://api.axisfi.financial
+​
+Authentication
+All API requests require authentication using your API key and secret:
+curl -X GET https://sandbox-api.axisfi.net/accounts \
+  -H "X-API-Key: your_api_key" \
+  -H "X-API-Secret: your_api_secret" \
+  -H "Api-Version: 2024-12-01"
+See Setting up your API credentials to learn how to obtain and use your credentials.

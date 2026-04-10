@@ -20,6 +20,12 @@
         "openapi": "openapi.json",
         "groups": [
           {
+            "group": "Overview",
+            "pages": [
+              "api-reference/introduction"
+            ]
+          },
+          {
             "group": "Wallets",
             "pages": [
               "GET /api/wallets"
