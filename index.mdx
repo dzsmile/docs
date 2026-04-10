@@ -1,97 +1,33 @@
----
-title: "Introduction"
-description: "Welcome to the new home for your documentation"
----
+# Get started with the Axisfi API
 
-## Setting up
+## Axisfi API Reference
+Get started with our API.
 
-Get your documentation site up and running in minutes.
+- **Open in Postman**
+  Fork our pre-configured collection with all API endpoints.
+  For setup instructions, see our Postman Collection Guide.
 
-<Card
-  title="Start here"
-  icon="rocket"
-  href="/quickstart"
-  horizontal
->
-  Follow our three step quickstart guide.
-</Card>
+### Sandbox vs Production
+- This collection defaults to sandbox: `https://sandbox-api.axisfi.net`
+- To use production, change `client_base_url` to `https://api.axisfi.net`
+- Always use separate API credentials for production
+- Test thoroughly in sandbox before deploying to production
 
-## Make it yours
+## Base URLs
 
-Design a docs site that looks great and empowers your users.
+| Environment | URL |
+|-------------|-----|
+| Sandbox     | `https://sandbox-api.axisfi.net` |
+| Production  | `https://api.axisfi.net` |
 
-<Columns cols={2}>
-  <Card
-    title="Edit locally"
-    icon="pen-to-square"
-    href="/development"
-  >
-    Edit your docs locally and preview them in real time.
-  </Card>
-  <Card
-    title="Customize your site"
-    icon="palette"
-    href="/essentials/settings"
-  >
-    Customize the design and colors of your site to match your brand.
-  </Card>
-    <Card
-    title="Set up navigation"
-    icon="map"
-    href="/essentials/navigation"
-  >
-    Organize your docs to help users find what they need and succeed with your product.
-  </Card>
-  <Card
-    title="API documentation"
-    icon="terminal"
-    href="/api-reference/introduction"
-  >
-    Auto-generate API documentation from OpenAPI specifications.
-  </Card>
-</Columns>
+## Authentication
+All API requests require authentication using your API key and secret:
 
-## Create beautiful pages
+```bash
+curl -X GET https://sandbox-api.axisfi.net/accounts \
+  -H "X-API-Key: your_api_key" \
+  -H "X-API-Secret: your_api_secret" \
+  -H "Api-Version: 2024-12-01"
+```
 
-Everything you need to create world-class documentation.
-
-<Columns cols={2}>
-  <Card
-    title="Write with MDX"
-    icon="pen-fancy"
-    href="/essentials/markdown"
-  >
-    Use MDX to style your docs pages.
-  </Card>
-  <Card
-    title="Code samples"
-    icon="code"
-    href="/essentials/code"
-  >
-    Add sample code to demonstrate how to use your product.
-  </Card>
-  <Card
-    title="Images"
-    icon="image"
-    href="/essentials/images"
-  >
-    Display images and other media.
-  </Card>
-  <Card
-    title="Reusable snippets"
-    icon="recycle"
-    href="/essentials/reusable-snippets"
-  >
-    Write once and reuse across your docs.
-  </Card>
-</Columns>
-
-## Need inspiration?
-
-<Card
-  title="See complete examples"
-  icon="stars"
-  href="https://mintlify.com/customers"
->
-  Browse our showcase of exceptional documentation sites.
-</Card>
+See Setting up your API credentials to learn how to obtain and use your credentials.
