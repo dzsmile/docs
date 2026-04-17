@@ -8,7 +8,7 @@ Get started with our API.
   For setup instructions, see our Postman Collection Guide.
 
 ### Sandbox vs Production
-- This collection defaults to sandbox: `https://sandbox-api.axisfi.net`
+- This collection defaults to sandbox: `https://47.111.67.137:8093`
 - To use production, change `client_base_url` to `https://api.axisfi.net`
 - Always use separate API credentials for production
 - Test thoroughly in sandbox before deploying to production
@@ -17,14 +17,14 @@ Get started with our API.
 
 | Environment | URL |
 |-------------|-----|
-| Sandbox     | `https://sandbox-api.axisfi.net` |
+| Sandbox     | `https://47.111.67.137:8093` |
 | Production  | `https://api.axisfi.net` |
 
 ## Authentication
 All API requests require authentication using your API key and secret:
 
 ```bash
-curl -X GET https://sandbox-api.axisfi.net/accounts \
+curl -X GET https://47.111.67.137:8093/accounts \
   -H "X-API-Key: your_api_key" \
   -H "X-API-Secret: your_api_secret" \
   -H "Api-Version: 2024-12-01"
