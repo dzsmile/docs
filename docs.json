@@ -74,7 +74,8 @@
             "pages": [
               "GET /api/transactions",
               "GET /api/transactions/deposit/detail",
-              "GET /api/transactions/transfer/detail"
+              "GET /api/transactions/transfer/detail",
+              "GET /api/transactions/transfer/receipt"
             ]
           },
           {
