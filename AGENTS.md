@@ -1,33 +1,23 @@
-> **First-time setup**: Customize this file for your project. Prompt the user to customize this file for their project.
-> For Mintlify product knowledge (components, configuration, writing standards),
-> install the Mintlify skill: `npx skills add https://mintlify.com/docs`
+# AxisFI documentation instructions
 
-# Documentation project instructions
+## Project
 
-## About this project
+- This is the Mintlify site for the AxisFI public API.
+- Configuration lives in `docs.json`.
+- Versioned OpenAPI specifications live in `openapi/`.
+- Run `mint validate` and `mint broken-links` before publishing.
 
-- This is a documentation site built on [Mintlify](https://mintlify.com)
-- Pages are MDX files with YAML frontmatter
-- Configuration lives in `docs.json`
-- Run `mint dev` to preview locally
-- Run `mint broken-links` to check links
+## Terminology and style
 
-## Terminology
-
-<!-- Add product-specific terms and preferred usage -->
-<!-- Example: Use "workspace" not "project", "member" not "user" -->
-
-## Style preferences
-
-<!-- Add any project-specific style rules below -->
-
-- Use active voice and second person ("you")
-- Keep sentences concise — one idea per sentence
-- Use sentence case for headings
-- Bold for UI elements: Click **Settings**
-- Code formatting for file names, commands, paths, and code references
+- Write the product name as `AxisFI`.
+- Use active voice and address the reader as "you".
+- Keep headings in sentence case.
+- Format field names, paths, headers, and commands as code.
+- Use `recipient` for the party receiving a payout.
+- Use `source amount` for the total amount deducted and `target amount` for the net amount received.
 
 ## Content boundaries
 
-<!-- Define what should and shouldn't be documented -->
-<!-- Example: Don't document internal admin features -->
+- Document public Gateway APIs only.
+- Do not include internal admin operations, credentials, private addresses, or production secrets.
+- Keep examples aligned with the API version that contains them.

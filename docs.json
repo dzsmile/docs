@@ -7,88 +7,187 @@
     "light": "#06B6D4",
     "dark": "#06B6D4"
   },
-  "api": {
-    "baseUrl": "http://127.0.0.1:8083/",
-    "input": "openapi.json",
-    "generate": true
-  },
   "favicon": "/favicon.png",
   "navigation": {
-    "tabs": [
+    "versions": [
       {
-        "tab": "API reference",
-        "openapi": "openapi.json",
-        "groups": [
+        "version": "API Version: 2026-08-31",
+        "tabs": [
           {
-            "group": "Overview",
-            "pages": [
-              "api-reference/introduction"
+            "tab": "API reference",
+            "openapi": {
+              "source": "openapi/2026-08-31.json",
+              "directory": "api-reference/2026-08-31"
+            },
+            "groups": [
+              {
+                "group": "Overview",
+                "pages": [
+                  "api-reference/introduction-2026-08-31"
+                ]
+              },
+              {
+                "group": "Wallets",
+                "pages": [
+                  "GET /api/wallets"
+                ]
+              },
+              {
+                "group": "Balances",
+                "pages": [
+                  "GET /api/balances"
+                ]
+              },
+              {
+                "group": "Deposit",
+                "pages": [
+                  "POST /api/deposit/create"
+                ]
+              },
+              {
+                "group": "Quotes",
+                "pages": [
+                  "POST /api/fx/quotes",
+                  "POST /api/fx/payout-fees"
+                ]
+              },
+              {
+                "group": "Transfer",
+                "pages": [
+                  "POST /api/transfer/create"
+                ]
+              },
+              {
+                "group": "Customers",
+                "pages": [
+                  "POST /api/customers/create",
+                  "GET /api/customers/detail",
+                  "POST /api/customers/{customer_id}/update",
+                  "POST /api/customers/{customer_id}/delete"
+                ]
+              },
+              {
+                "group": "Recipients",
+                "pages": [
+                  "POST /api/recipients/create",
+                  "GET /api/recipients/detail",
+                  "POST /api/recipients/{recipient_id}/update",
+                  "POST /api/recipients/{recipient_id}/delete"
+                ]
+              },
+              {
+                "group": "Transactions",
+                "pages": [
+                  "GET /api/transactions",
+                  "GET /api/transactions/deposit/detail",
+                  "GET /api/transactions/transfer/detail",
+                  "GET /api/transactions/transfer/receipt"
+                ]
+              },
+              {
+                "group": "Files",
+                "pages": [
+                  "POST /api/files/upload",
+                  "GET /api/files/download/{file_id}"
+                ]
+              },
+              {
+                "group": "Webhooks",
+                "pages": [
+                  "api-reference/webhooks/overview"
+                ]
+              }
             ]
-          },
+          }
+        ]
+      },
+      {
+        "version": "API Version: 2024-12-01",
+        "tabs": [
           {
-            "group": "Wallets",
-            "pages": [
-              "GET /api/wallets"
-            ]
-          },{
-            "group": "Balances",
-            "pages": [
-              "GET /api/balances"
-            ]
-          },{
-            "group": "Deposit",
-            "pages": [
-              "POST /api/deposit/create"
-            ]
-          },{
-            "group": "Quotes",
-            "pages": [
-              "POST /api/fx/quotes"
-            ]
-          },{
-            "group": "Transfer",
-            "pages": [
-              "POST /api/transfer/create"
-            ]
-          },
-          {
-            "group": "Customers",
-            "pages": [
-              "POST /api/customers/create",
-              "GET /api/customers/detail",
-              "POST /api/customers/{customer_id}/update",
-              "POST /api/customers/{customer_id}/delete"
-            ]
-          },
-          {
-            "group": "Recipients",
-            "pages": [
-              "POST /api/recipients/create",
-              "GET /api/recipients/detail",
-              "POST /api/recipients/{recipient_id}/update",
-              "POST /api/recipients/{recipient_id}/delete"
-            ]
-          },
-          {
-            "group": "Transactions",
-            "pages": [
-              "GET /api/transactions",
-              "GET /api/transactions/deposit/detail",
-              "GET /api/transactions/transfer/detail",
-              "GET /api/transactions/transfer/receipt"
-            ]
-          },
-          {
-            "group": "Files",
-            "pages": [
-              "POST /api/files/upload",
-              "GET /api/files/download/{file_id}"
-            ]
-          },
-          {
-            "group": "Webhooks",
-            "pages": [
-              "api-reference/webhooks/overview"
+            "tab": "API reference",
+            "openapi": {
+              "source": "openapi/2024-12-01.json",
+              "directory": "api-reference/2024-12-01"
+            },
+            "groups": [
+              {
+                "group": "Overview",
+                "pages": [
+                  "api-reference/introduction-2024-12-01"
+                ]
+              },
+              {
+                "group": "Wallets",
+                "pages": [
+                  "GET /api/wallets"
+                ]
+              },
+              {
+                "group": "Balances",
+                "pages": [
+                  "GET /api/balances"
+                ]
+              },
+              {
+                "group": "Deposit",
+                "pages": [
+                  "POST /api/deposit/create"
+                ]
+              },
+              {
+                "group": "Quotes",
+                "pages": [
+                  "POST /api/fx/quotes",
+                  "POST /api/fx/payout-fees"
+                ]
+              },
+              {
+                "group": "Transfer",
+                "pages": [
+                  "POST /api/transfer/create"
+                ]
+              },
+              {
+                "group": "Customers",
+                "pages": [
+                  "POST /api/customers/create",
+                  "GET /api/customers/detail",
+                  "POST /api/customers/{customer_id}/update",
+                  "POST /api/customers/{customer_id}/delete"
+                ]
+              },
+              {
+                "group": "Recipients",
+                "pages": [
+                  "POST /api/recipients/create",
+                  "GET /api/recipients/detail",
+                  "POST /api/recipients/{recipient_id}/update",
+                  "POST /api/recipients/{recipient_id}/delete"
+                ]
+              },
+              {
+                "group": "Transactions",
+                "pages": [
+                  "GET /api/transactions",
+                  "GET /api/transactions/deposit/detail",
+                  "GET /api/transactions/transfer/detail",
+                  "GET /api/transactions/transfer/receipt"
+                ]
+              },
+              {
+                "group": "Files",
+                "pages": [
+                  "POST /api/files/upload",
+                  "GET /api/files/download/{file_id}"
+                ]
+              },
+              {
+                "group": "Webhooks",
+                "pages": [
+                  "api-reference/webhooks/overview"
+                ]
+              }
             ]
           }
         ]
@@ -110,12 +209,5 @@
       "cursor",
       "vscode"
     ]
-  },
-  "footer": {
-    "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
-    }
   }
 }

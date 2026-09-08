@@ -1,3 +1,7 @@
+---
+title: "Webhooks"
+description: "Receive real-time AxisFI event notifications."
+---
 # Webhooks
 
 Subscribe to real-time event notifications for transfers, customers, and recipient status changes.
@@ -28,7 +32,7 @@ Stay updated on the lifecycle of individual or batch transfers.
 
 **Payload examples**
 
-The **data** object is the same as the response body of [Transfer](http://localhost:3000/api-reference/transfer/transfer). See example below.
+The **data** object is the same as the response body of Transfer endpoint (`POST /api/transfer/create`). See example below.
 
 ```json
 {
@@ -288,7 +292,7 @@ Monitor the status of your saved recipients.
 | --- | --- |
 | `recipient.active` | Recipient details are verified and ready for transfers. |
 | `recipient.rejected` | Recipient information is invalid or rejected. |
-| `recipient.supended` | Recipient has been blacklisted or paused for compliance reasons. |
+| `recipient.suspended` | Recipient has been blacklisted or paused for compliance reasons. |
 
 **Payload examples**
 

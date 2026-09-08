@@ -1,3 +1,7 @@
+---
+title: "Introduction"
+description: "Get started with the AxisFI API."
+---
 # Get started with the Axisfi API
 
 ## Axisfi API Reference
@@ -8,7 +12,7 @@ Get started with our API.
   For setup instructions, see our Postman Collection Guide.
 
 ### Sandbox vs Production
-- This collection defaults to sandbox: `http://47.111.67.137:8093`
+- This collection defaults to sandbox: `https://sandbox-api.axisfi.net`
 - To use production, change `client_base_url` to `https://api.axisfi.net`
 - Always use separate API credentials for production
 - Test thoroughly in sandbox before deploying to production
@@ -17,17 +21,17 @@ Get started with our API.
 
 | Environment | URL |
 |-------------|-----|
-| Sandbox     | `http://47.111.67.137:8093` |
+| Sandbox     | `https://sandbox-api.axisfi.net` |
 | Production  | `https://api.axisfi.net` |
 
 ## Authentication
 All API requests require authentication using your API key and secret:
 
 ```bash
-curl -X GET http://47.111.67.137:8093/accounts \
+curl -X GET https://sandbox-api.axisfi.net/api/wallets \
   -H "X-API-Key: your_api_key" \
   -H "X-API-Secret: your_api_secret" \
-  -H "Api-Version: 2024-12-01"
+  -H "Api-Version: 2026-08-31"
 ```
 
 See Setting up your API credentials to learn how to obtain and use your credentials.
