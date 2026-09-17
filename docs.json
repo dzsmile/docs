@@ -81,6 +81,7 @@
                   "GET /api/transactions",
                   "GET /api/transactions/deposit/detail",
                   "GET /api/transactions/transfer/detail",
+                  "GET /api/transactions/return/detail",
                   "GET /api/transactions/transfer/receipt"
                 ]
               },
@@ -172,6 +173,7 @@
                   "GET /api/transactions",
                   "GET /api/transactions/deposit/detail",
                   "GET /api/transactions/transfer/detail",
+                  "GET /api/transactions/return/detail",
                   "GET /api/transactions/transfer/receipt"
                 ]
               },

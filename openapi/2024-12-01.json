@@ -93,12 +93,32 @@
               }
             }
           },
-          "default": {
-            "description": "default response",
+          "401": {
+            "description": "Unauthorized",
             "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/TransferDetailsRespVo"
+              "application/json": {
+                "example": {
+                  "errors": [
+                    {
+                      "detail": "<string>",
+                      "code": "<string>"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "example": {
+                  "errors": [
+                    {
+                      "detail": "<string>",
+                      "code": "<string>"
+                    }
+                  ]
                 }
               }
             }
@@ -128,32 +148,12 @@
               }
             }
           },
-          "401": {
-            "description": "Unauthorized",
+          "default": {
+            "description": "default response",
             "content": {
-              "application/json": {
-                "example": {
-                  "errors": [
-                    {
-                      "detail": "<string>",
-                      "code": "<string>"
-                    }
-                  ]
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "application/json": {
-                "example": {
-                  "errors": [
-                    {
-                      "detail": "<string>",
-                      "code": "<string>"
-                    }
-                  ]
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/TransferDetailsRespVo"
                 }
               }
             }
@@ -244,31 +244,6 @@
               }
             }
           },
-          "200": {
-            "description": "Operation Successful",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/RecipientDetailsRespVo"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden (No Permission)",
-            "content": {
-              "application/json": {
-                "example": {
-                  "errors": [
-                    {
-                      "detail": "<string>",
-                      "code": "<string>"
-                    }
-                  ]
-                }
-              }
-            }
-          },
           "401": {
             "description": "Unauthorized",
             "content": {
@@ -286,6 +261,31 @@
           },
           "404": {
             "description": "Not Found",
+            "content": {
+              "application/json": {
+                "example": {
+                  "errors": [
+                    {
+                      "detail": "<string>",
+                      "code": "<string>"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Operation Successful",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/RecipientDetailsRespVo"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden (No Permission)",
             "content": {
               "application/json": {
                 "example": {
@@ -375,31 +375,6 @@
               }
             }
           },
-          "200": {
-            "description": "Operation Successful",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/AjaxResult"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden (No Permission)",
-            "content": {
-              "application/json": {
-                "example": {
-                  "errors": [
-                    {
-                      "detail": "<string>",
-                      "code": "<string>"
-                    }
-                  ]
-                }
-              }
-            }
-          },
           "401": {
             "description": "Unauthorized",
             "content": {
@@ -417,6 +392,31 @@
           },
           "404": {
             "description": "Not Found",
+            "content": {
+              "application/json": {
+                "example": {
+                  "errors": [
+                    {
+                      "detail": "<string>",
+                      "code": "<string>"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Operation Successful",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/AjaxResult"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden (No Permission)",
             "content": {
               "application/json": {
                 "example": {
@@ -508,31 +508,6 @@
               }
             }
           },
-          "200": {
-            "description": "Operation Successful",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/RecipientDetailsRespVo"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden (No Permission)",
-            "content": {
-              "application/json": {
-                "example": {
-                  "errors": [
-                    {
-                      "detail": "<string>",
-                      "code": "<string>"
-                    }
-                  ]
-                }
-              }
-            }
-          },
           "401": {
             "description": "Unauthorized",
             "content": {
@@ -550,6 +525,31 @@
           },
           "404": {
             "description": "Not Found",
+            "content": {
+              "application/json": {
+                "example": {
+                  "errors": [
+                    {
+                      "detail": "<string>",
+                      "code": "<string>"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Operation Successful",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/RecipientDetailsRespVo"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden (No Permission)",
             "content": {
               "application/json": {
                 "example": {
@@ -641,31 +641,6 @@
               }
             }
           },
-          "200": {
-            "description": "Operation Successful",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ExchangeRecordsRespVo"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden (No Permission)",
-            "content": {
-              "application/json": {
-                "example": {
-                  "errors": [
-                    {
-                      "detail": "<string>",
-                      "code": "<string>"
-                    }
-                  ]
-                }
-              }
-            }
-          },
           "401": {
             "description": "Unauthorized",
             "content": {
@@ -683,6 +658,31 @@
           },
           "404": {
             "description": "Not Found",
+            "content": {
+              "application/json": {
+                "example": {
+                  "errors": [
+                    {
+                      "detail": "<string>",
+                      "code": "<string>"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Operation Successful",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExchangeRecordsRespVo"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden (No Permission)",
             "content": {
               "application/json": {
                 "example": {
@@ -774,31 +774,6 @@
               }
             }
           },
-          "200": {
-            "description": "Operation Successful",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/PayoutFeeQuoteRespVo"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden (No Permission)",
-            "content": {
-              "application/json": {
-                "example": {
-                  "errors": [
-                    {
-                      "detail": "<string>",
-                      "code": "<string>"
-                    }
-                  ]
-                }
-              }
-            }
-          },
           "401": {
             "description": "Unauthorized",
             "content": {
@@ -816,6 +791,31 @@
           },
           "404": {
             "description": "Not Found",
+            "content": {
+              "application/json": {
+                "example": {
+                  "errors": [
+                    {
+                      "detail": "<string>",
+                      "code": "<string>"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Operation Successful",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PayoutFeeQuoteRespVo"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden (No Permission)",
             "content": {
               "application/json": {
                 "example": {
@@ -937,31 +937,6 @@
               }
             }
           },
-          "200": {
-            "description": "Operation Successful",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/FileRespVo"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden (No Permission)",
-            "content": {
-              "application/json": {
-                "example": {
-                  "errors": [
-                    {
-                      "detail": "<string>",
-                      "code": "<string>"
-                    }
-                  ]
-                }
-              }
-            }
-          },
           "401": {
             "description": "Unauthorized",
             "content": {
@@ -979,6 +954,31 @@
           },
           "404": {
             "description": "Not Found",
+            "content": {
+              "application/json": {
+                "example": {
+                  "errors": [
+                    {
+                      "detail": "<string>",
+                      "code": "<string>"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Operation Successful",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileRespVo"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden (No Permission)",
             "content": {
               "application/json": {
                 "example": {
@@ -1070,41 +1070,6 @@
               }
             }
           },
-          "200": {
-            "description": "Operation Successful",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/DepositDetailsRespVo"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden (No Permission)",
-            "content": {
-              "application/json": {
-                "example": {
-                  "errors": [
-                    {
-                      "detail": "<string>",
-                      "code": "<string>"
-                    }
-                  ]
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "default response",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/DepositDetailsRespVo"
-                }
-              }
-            }
-          },
           "401": {
             "description": "Unauthorized",
             "content": {
@@ -1122,6 +1087,41 @@
           },
           "404": {
             "description": "Not Found",
+            "content": {
+              "application/json": {
+                "example": {
+                  "errors": [
+                    {
+                      "detail": "<string>",
+                      "code": "<string>"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Operation Successful",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/DepositDetailsRespVo"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "default response",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/DepositDetailsRespVo"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden (No Permission)",
             "content": {
               "application/json": {
                 "example": {
@@ -1221,31 +1221,6 @@
               }
             }
           },
-          "200": {
-            "description": "Operation Successful",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/CustomerDetailsRespVo"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden (No Permission)",
-            "content": {
-              "application/json": {
-                "example": {
-                  "errors": [
-                    {
-                      "detail": "<string>",
-                      "code": "<string>"
-                    }
-                  ]
-                }
-              }
-            }
-          },
           "401": {
             "description": "Unauthorized",
             "content": {
@@ -1263,6 +1238,31 @@
           },
           "404": {
             "description": "Not Found",
+            "content": {
+              "application/json": {
+                "example": {
+                  "errors": [
+                    {
+                      "detail": "<string>",
+                      "code": "<string>"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Operation Successful",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomerDetailsRespVo"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden (No Permission)",
             "content": {
               "application/json": {
                 "example": {
@@ -1352,31 +1352,6 @@
               }
             }
           },
-          "200": {
-            "description": "Operation Successful",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/AjaxResult"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden (No Permission)",
-            "content": {
-              "application/json": {
-                "example": {
-                  "errors": [
-                    {
-                      "detail": "<string>",
-                      "code": "<string>"
-                    }
-                  ]
-                }
-              }
-            }
-          },
           "401": {
             "description": "Unauthorized",
             "content": {
@@ -1394,6 +1369,31 @@
           },
           "404": {
             "description": "Not Found",
+            "content": {
+              "application/json": {
+                "example": {
+                  "errors": [
+                    {
+                      "detail": "<string>",
+                      "code": "<string>"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Operation Successful",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/AjaxResult"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden (No Permission)",
             "content": {
               "application/json": {
                 "example": {
@@ -1485,31 +1485,6 @@
               }
             }
           },
-          "200": {
-            "description": "Operation Successful",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/CustomerDetailsRespVo"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden (No Permission)",
-            "content": {
-              "application/json": {
-                "example": {
-                  "errors": [
-                    {
-                      "detail": "<string>",
-                      "code": "<string>"
-                    }
-                  ]
-                }
-              }
-            }
-          },
           "401": {
             "description": "Unauthorized",
             "content": {
@@ -1536,6 +1511,97 @@
                       "code": "<string>"
                     }
                   ]
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Operation Successful",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomerDetailsRespVo"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden (No Permission)",
+            "content": {
+              "application/json": {
+                "example": {
+                  "errors": [
+                    {
+                      "detail": "<string>",
+                      "code": "<string>"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/health": {
+      "get": {
+        "tags": [
+          "health-controller"
+        ],
+        "operationId": "healthV20241201",
+        "parameters": [
+          {
+            "name": "Api-Version",
+            "in": "header",
+            "description": "AxisFi API contract version",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "default": "2024-12-01",
+              "enum": [
+                "2024-12-01"
+              ]
+            },
+            "example": "2024-12-01"
+          }
+        ],
+        "responses": {
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorRespVo"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorRespVo"
+                }
+              }
+            }
+          },
+          "405": {
+            "description": "Method Not Allowed",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorRespVo"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/AjaxResult"
                 }
               }
             }
@@ -1608,34 +1674,6 @@
               }
             }
           },
-          "200": {
-            "description": "Operation Successful",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/WalletRespVo"
-                  }
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden (No Permission)",
-            "content": {
-              "application/json": {
-                "example": {
-                  "errors": [
-                    {
-                      "detail": "<string>",
-                      "code": "<string>"
-                    }
-                  ]
-                }
-              }
-            }
-          },
           "401": {
             "description": "Unauthorized",
             "content": {
@@ -1653,6 +1691,34 @@
           },
           "404": {
             "description": "Not Found",
+            "content": {
+              "application/json": {
+                "example": {
+                  "errors": [
+                    {
+                      "detail": "<string>",
+                      "code": "<string>"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Operation Successful",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/WalletRespVo"
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden (No Permission)",
             "content": {
               "application/json": {
                 "example": {
@@ -1757,31 +1823,6 @@
               }
             }
           },
-          "200": {
-            "description": "Operation Successful",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/PageRespVoTransactionType"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden (No Permission)",
-            "content": {
-              "application/json": {
-                "example": {
-                  "errors": [
-                    {
-                      "detail": "<string>",
-                      "code": "<string>"
-                    }
-                  ]
-                }
-              }
-            }
-          },
           "401": {
             "description": "Unauthorized",
             "content": {
@@ -1799,6 +1840,31 @@
           },
           "404": {
             "description": "Not Found",
+            "content": {
+              "application/json": {
+                "example": {
+                  "errors": [
+                    {
+                      "detail": "<string>",
+                      "code": "<string>"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Operation Successful",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/PageRespVoTransactionType"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden (No Permission)",
             "content": {
               "application/json": {
                 "example": {
@@ -1889,35 +1955,6 @@
               }
             }
           },
-          "200": {
-            "description": "Operation Successful",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "type": "string",
-                    "format": "byte"
-                  }
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden (No Permission)",
-            "content": {
-              "application/json": {
-                "example": {
-                  "errors": [
-                    {
-                      "detail": "<string>",
-                      "code": "<string>"
-                    }
-                  ]
-                }
-              }
-            }
-          },
           "401": {
             "description": "Unauthorized",
             "content": {
@@ -1935,6 +1972,35 @@
           },
           "404": {
             "description": "Not Found",
+            "content": {
+              "application/json": {
+                "example": {
+                  "errors": [
+                    {
+                      "detail": "<string>",
+                      "code": "<string>"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Operation Successful",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "format": "byte"
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden (No Permission)",
             "content": {
               "application/json": {
                 "example": {
@@ -2034,6 +2100,36 @@
               }
             }
           },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "example": {
+                  "errors": [
+                    {
+                      "detail": "<string>",
+                      "code": "<string>"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "example": {
+                  "errors": [
+                    {
+                      "detail": "<string>",
+                      "code": "<string>"
+                    }
+                  ]
+                }
+              }
+            }
+          },
           "200": {
             "description": "Operation Successful",
             "content": {
@@ -2058,6 +2154,90 @@
                 }
               }
             }
+          }
+        }
+      }
+    },
+    "/api/transactions/return/detail": {
+      "get": {
+        "tags": [
+          "Transactions"
+        ],
+        "summary": "Get Return Details",
+        "description": "Get a payout return transaction by its transaction or refund order ID.",
+        "operationId": "returnDetailV20241201",
+        "parameters": [
+          {
+            "name": "partner_transaction_id",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "transaction_id",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Api-Version",
+            "in": "header",
+            "description": "AxisFi API contract version",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "default": "2024-12-01",
+              "enum": [
+                "2024-12-01"
+              ]
+            },
+            "example": "2024-12-01"
+          }
+        ],
+        "responses": {
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "example": {
+                  "errors": [
+                    {
+                      "detail": "<string>",
+                      "code": "<string>"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid Parameter",
+            "content": {
+              "application/json": {
+                "example": {
+                  "errors": [
+                    {
+                      "detail": "<string>",
+                      "code": "<string>"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "405": {
+            "description": "Method Not Allowed",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorRespVo"
+                }
+              }
+            }
           },
           "401": {
             "description": "Unauthorized",
@@ -2076,6 +2256,31 @@
           },
           "404": {
             "description": "Not Found",
+            "content": {
+              "application/json": {
+                "example": {
+                  "errors": [
+                    {
+                      "detail": "<string>",
+                      "code": "<string>"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Operation Successful",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ReturnDetailsRespVo"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden (No Permission)",
             "content": {
               "application/json": {
                 "example": {
@@ -2175,31 +2380,6 @@
               }
             }
           },
-          "200": {
-            "description": "Operation Successful",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/DepositDetailsRespVo"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden (No Permission)",
-            "content": {
-              "application/json": {
-                "example": {
-                  "errors": [
-                    {
-                      "detail": "<string>",
-                      "code": "<string>"
-                    }
-                  ]
-                }
-              }
-            }
-          },
           "401": {
             "description": "Unauthorized",
             "content": {
@@ -2217,6 +2397,31 @@
           },
           "404": {
             "description": "Not Found",
+            "content": {
+              "application/json": {
+                "example": {
+                  "errors": [
+                    {
+                      "detail": "<string>",
+                      "code": "<string>"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Operation Successful",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/DepositDetailsRespVo"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden (No Permission)",
             "content": {
               "application/json": {
                 "example": {
@@ -2316,31 +2521,6 @@
               }
             }
           },
-          "200": {
-            "description": "Operation Successful",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/RecipientDetailsRespVo"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden (No Permission)",
-            "content": {
-              "application/json": {
-                "example": {
-                  "errors": [
-                    {
-                      "detail": "<string>",
-                      "code": "<string>"
-                    }
-                  ]
-                }
-              }
-            }
-          },
           "401": {
             "description": "Unauthorized",
             "content": {
@@ -2358,6 +2538,31 @@
           },
           "404": {
             "description": "Not Found",
+            "content": {
+              "application/json": {
+                "example": {
+                  "errors": [
+                    {
+                      "detail": "<string>",
+                      "code": "<string>"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Operation Successful",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/RecipientDetailsRespVo"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden (No Permission)",
             "content": {
               "application/json": {
                 "example": {
@@ -2447,24 +2652,6 @@
               }
             }
           },
-          "200": {
-            "description": "Operation Successful"
-          },
-          "403": {
-            "description": "Forbidden (No Permission)",
-            "content": {
-              "application/json": {
-                "example": {
-                  "errors": [
-                    {
-                      "detail": "<string>",
-                      "code": "<string>"
-                    }
-                  ]
-                }
-              }
-            }
-          },
           "401": {
             "description": "Unauthorized",
             "content": {
@@ -2482,6 +2669,24 @@
           },
           "404": {
             "description": "Not Found",
+            "content": {
+              "application/json": {
+                "example": {
+                  "errors": [
+                    {
+                      "detail": "<string>",
+                      "code": "<string>"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Operation Successful"
+          },
+          "403": {
+            "description": "Forbidden (No Permission)",
             "content": {
               "application/json": {
                 "example": {
@@ -2581,31 +2786,6 @@
               }
             }
           },
-          "200": {
-            "description": "Operation Successful",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/CustomerDetailsRespVo"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden (No Permission)",
-            "content": {
-              "application/json": {
-                "example": {
-                  "errors": [
-                    {
-                      "detail": "<string>",
-                      "code": "<string>"
-                    }
-                  ]
-                }
-              }
-            }
-          },
           "401": {
             "description": "Unauthorized",
             "content": {
@@ -2623,6 +2803,31 @@
           },
           "404": {
             "description": "Not Found",
+            "content": {
+              "application/json": {
+                "example": {
+                  "errors": [
+                    {
+                      "detail": "<string>",
+                      "code": "<string>"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Operation Successful",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomerDetailsRespVo"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden (No Permission)",
             "content": {
               "application/json": {
                 "example": {
@@ -2704,34 +2909,6 @@
               }
             }
           },
-          "200": {
-            "description": "Operation Successful",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/BalanceRespVo"
-                  }
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden (No Permission)",
-            "content": {
-              "application/json": {
-                "example": {
-                  "errors": [
-                    {
-                      "detail": "<string>",
-                      "code": "<string>"
-                    }
-                  ]
-                }
-              }
-            }
-          },
           "401": {
             "description": "Unauthorized",
             "content": {
@@ -2749,6 +2926,34 @@
           },
           "404": {
             "description": "Not Found",
+            "content": {
+              "application/json": {
+                "example": {
+                  "errors": [
+                    {
+                      "detail": "<string>",
+                      "code": "<string>"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Operation Successful",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/BalanceRespVo"
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden (No Permission)",
             "content": {
               "application/json": {
                 "example": {
@@ -2992,7 +3197,7 @@
             ]
           },
           "amount": {
-            "maximum": 100000000.0,
+            "maximum": 100000000.00,
             "exclusiveMaximum": false,
             "minimum": 0.01,
             "exclusiveMinimum": false,
@@ -3032,7 +3237,7 @@
             ]
           },
           "amount": {
-            "maximum": 100000000.0,
+            "maximum": 100000000.00,
             "exclusiveMaximum": false,
             "minimum": 0.01,
             "exclusiveMinimum": false,
@@ -3106,7 +3311,7 @@
         "type": "object",
         "properties": {
           "registration_address_line1": {
-            "maxLength": 255,
+            "maxLength": 50,
             "minLength": 0,
             "type": "string",
             "description": "Registration Address Line 1"
@@ -3377,7 +3582,7 @@
             ]
           },
           "estimated_monthly_revenue_amount": {
-            "maximum": 1000000.0,
+            "maximum": 1000000.00,
             "exclusiveMaximum": false,
             "minimum": 0.01,
             "exclusiveMinimum": false,
@@ -3921,8 +4126,28 @@
             "enum": [
               "pending",
               "completed",
-              "failed"
+              "failed",
+              "returned"
             ]
+          },
+          "refund_order_id": {
+            "type": "string"
+          },
+          "refund_amount": {
+            "type": "number"
+          },
+          "refund_currency": {
+            "type": "string"
+          },
+          "refund_reason": {
+            "type": "string"
+          },
+          "refund_status": {
+            "type": "string"
+          },
+          "refunded_at": {
+            "type": "string",
+            "format": "date-time"
           },
           "customer_id": {
             "type": "string",
@@ -4170,7 +4395,7 @@
             ]
           },
           "source_amount": {
-            "maximum": 100000000.0,
+            "maximum": 100000000.00,
             "exclusiveMaximum": false,
             "minimum": 0.01,
             "exclusiveMinimum": false,
@@ -4179,7 +4404,7 @@
             "example": 99.99
           },
           "target_amount": {
-            "maximum": 100000000.0,
+            "maximum": 100000000.00,
             "exclusiveMaximum": false,
             "minimum": 0.01,
             "exclusiveMinimum": false,
@@ -4332,7 +4557,7 @@
             "example": "quote_f91fafe4b4fb463c8d0b04a90fece464"
           },
           "source_amount": {
-            "maximum": 100000000.0,
+            "maximum": 100000000.00,
             "exclusiveMaximum": false,
             "minimum": 0.01,
             "exclusiveMinimum": false,
@@ -4342,7 +4567,7 @@
             "example": 1000.0
           },
           "target_amount": {
-            "maximum": 100000000.0,
+            "maximum": 100000000.00,
             "exclusiveMaximum": false,
             "minimum": 0.01,
             "exclusiveMinimum": false,
@@ -4456,7 +4681,7 @@
             ]
           },
           "amount": {
-            "maximum": 100000000.0,
+            "maximum": 100000000.00,
             "exclusiveMaximum": false,
             "minimum": 0.01,
             "exclusiveMinimum": false,
@@ -4599,7 +4824,7 @@
             ]
           },
           "estimated_monthly_revenue_amount": {
-            "maximum": 1000000.0,
+            "maximum": 1000000.00,
             "exclusiveMaximum": false,
             "minimum": 0.01,
             "exclusiveMinimum": false,
@@ -4892,7 +5117,7 @@
         "type": "object",
         "properties": {
           "registration_address_line1": {
-            "maxLength": 255,
+            "maxLength": 50,
             "minLength": 0,
             "type": "string",
             "description": "Registration Address Line 1"
@@ -5047,13 +5272,88 @@
           }
         }
       },
+      "ReturnDetailsRespVo": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string",
+            "description": "Return transaction status",
+            "example": "completed",
+            "enum": [
+              "pending",
+              "completed",
+              "failed"
+            ]
+          },
+          "currency": {
+            "type": "string",
+            "description": "Return currency code",
+            "example": "USD"
+          },
+          "amount": {
+            "type": "number",
+            "description": "Return amount",
+            "example": 990.0
+          },
+          "sender_account_name": {
+            "type": "string",
+            "description": "Sender bank account name",
+            "example": "Example Beneficiary Ltd"
+          },
+          "sender_account_number": {
+            "type": "string",
+            "description": "Sender bank account number",
+            "example": "1234567890"
+          },
+          "transaction_type": {
+            "type": "string",
+            "description": "Transaction Type",
+            "example": "return",
+            "enum": [
+              "return"
+            ]
+          },
+          "transaction_id": {
+            "type": "string",
+            "description": "AxisFI Return Transaction Id",
+            "example": "txn_6605854fbcf4423bb4d9c865fc10b10e"
+          },
+          "original_transaction_id": {
+            "type": "string",
+            "description": "Original Payout Transaction Id",
+            "example": "txn_4963acdd765344c588c10cdd441a7399"
+          },
+          "refund_order_id": {
+            "type": "string",
+            "description": "Refund Order Id",
+            "example": "R202609161531506979209"
+          },
+          "refund_reason": {
+            "type": "string",
+            "description": "Reason for the payout return",
+            "example": "Beneficiary bank return"
+          },
+          "created_at": {
+            "type": "string",
+            "description": "Return transaction creation time",
+            "format": "date-time"
+          },
+          "completed_at": {
+            "type": "string",
+            "description": "Return transaction completion time",
+            "format": "date-time"
+          }
+        },
+        "description": "Payout return transaction"
+      },
       "TransactionType": {
         "type": "object",
         "discriminator": {
           "propertyName": "transaction_type",
           "mapping": {
             "deposit": "#/components/schemas/DepositDetailsRespVo",
-            "transfer": "#/components/schemas/TransferDetailsRespVo"
+            "transfer": "#/components/schemas/TransferDetailsRespVo",
+            "return": "#/components/schemas/ReturnDetailsRespVo"
           }
         },
         "oneOf": [
@@ -5062,6 +5362,9 @@
           },
           {
             "$ref": "#/components/schemas/TransferDetailsRespVo"
+          },
+          {
+            "$ref": "#/components/schemas/ReturnDetailsRespVo"
           }
         ]
       },
