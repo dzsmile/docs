@@ -103,8 +103,8 @@
               }
             }
           },
-          "403": {
-            "description": "Forbidden (No Permission)",
+          "401": {
+            "description": "Unauthorized",
             "content": {
               "application/json": {
                 "example": {
@@ -118,8 +118,23 @@
               }
             }
           },
-          "401": {
-            "description": "Unauthorized",
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "example": {
+                  "errors": [
+                    {
+                      "detail": "<string>",
+                      "code": "<string>"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden (No Permission)",
             "content": {
               "application/json": {
                 "example": {
@@ -139,21 +154,6 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/TransferDetailsRespVo"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "application/json": {
-                "example": {
-                  "errors": [
-                    {
-                      "detail": "<string>",
-                      "code": "<string>"
-                    }
-                  ]
                 }
               }
             }
@@ -254,21 +254,6 @@
               }
             }
           },
-          "403": {
-            "description": "Forbidden (No Permission)",
-            "content": {
-              "application/json": {
-                "example": {
-                  "errors": [
-                    {
-                      "detail": "<string>",
-                      "code": "<string>"
-                    }
-                  ]
-                }
-              }
-            }
-          },
           "401": {
             "description": "Unauthorized",
             "content": {
@@ -286,6 +271,21 @@
           },
           "404": {
             "description": "Not Found",
+            "content": {
+              "application/json": {
+                "example": {
+                  "errors": [
+                    {
+                      "detail": "<string>",
+                      "code": "<string>"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden (No Permission)",
             "content": {
               "application/json": {
                 "example": {
@@ -385,21 +385,6 @@
               }
             }
           },
-          "403": {
-            "description": "Forbidden (No Permission)",
-            "content": {
-              "application/json": {
-                "example": {
-                  "errors": [
-                    {
-                      "detail": "<string>",
-                      "code": "<string>"
-                    }
-                  ]
-                }
-              }
-            }
-          },
           "401": {
             "description": "Unauthorized",
             "content": {
@@ -417,6 +402,21 @@
           },
           "404": {
             "description": "Not Found",
+            "content": {
+              "application/json": {
+                "example": {
+                  "errors": [
+                    {
+                      "detail": "<string>",
+                      "code": "<string>"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden (No Permission)",
             "content": {
               "application/json": {
                 "example": {
@@ -518,21 +518,6 @@
               }
             }
           },
-          "403": {
-            "description": "Forbidden (No Permission)",
-            "content": {
-              "application/json": {
-                "example": {
-                  "errors": [
-                    {
-                      "detail": "<string>",
-                      "code": "<string>"
-                    }
-                  ]
-                }
-              }
-            }
-          },
           "401": {
             "description": "Unauthorized",
             "content": {
@@ -550,6 +535,21 @@
           },
           "404": {
             "description": "Not Found",
+            "content": {
+              "application/json": {
+                "example": {
+                  "errors": [
+                    {
+                      "detail": "<string>",
+                      "code": "<string>"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden (No Permission)",
             "content": {
               "application/json": {
                 "example": {
@@ -651,21 +651,6 @@
               }
             }
           },
-          "403": {
-            "description": "Forbidden (No Permission)",
-            "content": {
-              "application/json": {
-                "example": {
-                  "errors": [
-                    {
-                      "detail": "<string>",
-                      "code": "<string>"
-                    }
-                  ]
-                }
-              }
-            }
-          },
           "401": {
             "description": "Unauthorized",
             "content": {
@@ -683,6 +668,21 @@
           },
           "404": {
             "description": "Not Found",
+            "content": {
+              "application/json": {
+                "example": {
+                  "errors": [
+                    {
+                      "detail": "<string>",
+                      "code": "<string>"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden (No Permission)",
             "content": {
               "application/json": {
                 "example": {
@@ -784,21 +784,6 @@
               }
             }
           },
-          "403": {
-            "description": "Forbidden (No Permission)",
-            "content": {
-              "application/json": {
-                "example": {
-                  "errors": [
-                    {
-                      "detail": "<string>",
-                      "code": "<string>"
-                    }
-                  ]
-                }
-              }
-            }
-          },
           "401": {
             "description": "Unauthorized",
             "content": {
@@ -816,6 +801,21 @@
           },
           "404": {
             "description": "Not Found",
+            "content": {
+              "application/json": {
+                "example": {
+                  "errors": [
+                    {
+                      "detail": "<string>",
+                      "code": "<string>"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden (No Permission)",
             "content": {
               "application/json": {
                 "example": {
@@ -947,21 +947,6 @@
               }
             }
           },
-          "403": {
-            "description": "Forbidden (No Permission)",
-            "content": {
-              "application/json": {
-                "example": {
-                  "errors": [
-                    {
-                      "detail": "<string>",
-                      "code": "<string>"
-                    }
-                  ]
-                }
-              }
-            }
-          },
           "401": {
             "description": "Unauthorized",
             "content": {
@@ -979,6 +964,21 @@
           },
           "404": {
             "description": "Not Found",
+            "content": {
+              "application/json": {
+                "example": {
+                  "errors": [
+                    {
+                      "detail": "<string>",
+                      "code": "<string>"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden (No Permission)",
             "content": {
               "application/json": {
                 "example": {
@@ -1080,21 +1080,6 @@
               }
             }
           },
-          "403": {
-            "description": "Forbidden (No Permission)",
-            "content": {
-              "application/json": {
-                "example": {
-                  "errors": [
-                    {
-                      "detail": "<string>",
-                      "code": "<string>"
-                    }
-                  ]
-                }
-              }
-            }
-          },
           "401": {
             "description": "Unauthorized",
             "content": {
@@ -1112,6 +1097,21 @@
           },
           "404": {
             "description": "Not Found",
+            "content": {
+              "application/json": {
+                "example": {
+                  "errors": [
+                    {
+                      "detail": "<string>",
+                      "code": "<string>"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden (No Permission)",
             "content": {
               "application/json": {
                 "example": {
@@ -1231,21 +1231,6 @@
               }
             }
           },
-          "403": {
-            "description": "Forbidden (No Permission)",
-            "content": {
-              "application/json": {
-                "example": {
-                  "errors": [
-                    {
-                      "detail": "<string>",
-                      "code": "<string>"
-                    }
-                  ]
-                }
-              }
-            }
-          },
           "401": {
             "description": "Unauthorized",
             "content": {
@@ -1263,6 +1248,21 @@
           },
           "404": {
             "description": "Not Found",
+            "content": {
+              "application/json": {
+                "example": {
+                  "errors": [
+                    {
+                      "detail": "<string>",
+                      "code": "<string>"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden (No Permission)",
             "content": {
               "application/json": {
                 "example": {
@@ -1362,21 +1362,6 @@
               }
             }
           },
-          "403": {
-            "description": "Forbidden (No Permission)",
-            "content": {
-              "application/json": {
-                "example": {
-                  "errors": [
-                    {
-                      "detail": "<string>",
-                      "code": "<string>"
-                    }
-                  ]
-                }
-              }
-            }
-          },
           "401": {
             "description": "Unauthorized",
             "content": {
@@ -1394,6 +1379,21 @@
           },
           "404": {
             "description": "Not Found",
+            "content": {
+              "application/json": {
+                "example": {
+                  "errors": [
+                    {
+                      "detail": "<string>",
+                      "code": "<string>"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden (No Permission)",
             "content": {
               "application/json": {
                 "example": {
@@ -1495,21 +1495,6 @@
               }
             }
           },
-          "403": {
-            "description": "Forbidden (No Permission)",
-            "content": {
-              "application/json": {
-                "example": {
-                  "errors": [
-                    {
-                      "detail": "<string>",
-                      "code": "<string>"
-                    }
-                  ]
-                }
-              }
-            }
-          },
           "401": {
             "description": "Unauthorized",
             "content": {
@@ -1527,6 +1512,21 @@
           },
           "404": {
             "description": "Not Found",
+            "content": {
+              "application/json": {
+                "example": {
+                  "errors": [
+                    {
+                      "detail": "<string>",
+                      "code": "<string>"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden (No Permission)",
             "content": {
               "application/json": {
                 "example": {
@@ -1687,21 +1687,6 @@
               }
             }
           },
-          "403": {
-            "description": "Forbidden (No Permission)",
-            "content": {
-              "application/json": {
-                "example": {
-                  "errors": [
-                    {
-                      "detail": "<string>",
-                      "code": "<string>"
-                    }
-                  ]
-                }
-              }
-            }
-          },
           "401": {
             "description": "Unauthorized",
             "content": {
@@ -1719,6 +1704,21 @@
           },
           "404": {
             "description": "Not Found",
+            "content": {
+              "application/json": {
+                "example": {
+                  "errors": [
+                    {
+                      "detail": "<string>",
+                      "code": "<string>"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden (No Permission)",
             "content": {
               "application/json": {
                 "example": {
@@ -1833,21 +1833,6 @@
               }
             }
           },
-          "403": {
-            "description": "Forbidden (No Permission)",
-            "content": {
-              "application/json": {
-                "example": {
-                  "errors": [
-                    {
-                      "detail": "<string>",
-                      "code": "<string>"
-                    }
-                  ]
-                }
-              }
-            }
-          },
           "401": {
             "description": "Unauthorized",
             "content": {
@@ -1865,6 +1850,21 @@
           },
           "404": {
             "description": "Not Found",
+            "content": {
+              "application/json": {
+                "example": {
+                  "errors": [
+                    {
+                      "detail": "<string>",
+                      "code": "<string>"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden (No Permission)",
             "content": {
               "application/json": {
                 "example": {
@@ -1969,21 +1969,6 @@
               }
             }
           },
-          "403": {
-            "description": "Forbidden (No Permission)",
-            "content": {
-              "application/json": {
-                "example": {
-                  "errors": [
-                    {
-                      "detail": "<string>",
-                      "code": "<string>"
-                    }
-                  ]
-                }
-              }
-            }
-          },
           "401": {
             "description": "Unauthorized",
             "content": {
@@ -2001,6 +1986,21 @@
           },
           "404": {
             "description": "Not Found",
+            "content": {
+              "application/json": {
+                "example": {
+                  "errors": [
+                    {
+                      "detail": "<string>",
+                      "code": "<string>"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden (No Permission)",
             "content": {
               "application/json": {
                 "example": {
@@ -2105,21 +2105,6 @@
               }
             }
           },
-          "403": {
-            "description": "Forbidden (No Permission)",
-            "content": {
-              "application/json": {
-                "example": {
-                  "errors": [
-                    {
-                      "detail": "<string>",
-                      "code": "<string>"
-                    }
-                  ]
-                }
-              }
-            }
-          },
           "401": {
             "description": "Unauthorized",
             "content": {
@@ -2137,6 +2122,21 @@
           },
           "404": {
             "description": "Not Found",
+            "content": {
+              "application/json": {
+                "example": {
+                  "errors": [
+                    {
+                      "detail": "<string>",
+                      "code": "<string>"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden (No Permission)",
             "content": {
               "application/json": {
                 "example": {
@@ -2241,21 +2241,6 @@
               }
             }
           },
-          "403": {
-            "description": "Forbidden (No Permission)",
-            "content": {
-              "application/json": {
-                "example": {
-                  "errors": [
-                    {
-                      "detail": "<string>",
-                      "code": "<string>"
-                    }
-                  ]
-                }
-              }
-            }
-          },
           "401": {
             "description": "Unauthorized",
             "content": {
@@ -2273,6 +2258,21 @@
           },
           "404": {
             "description": "Not Found",
+            "content": {
+              "application/json": {
+                "example": {
+                  "errors": [
+                    {
+                      "detail": "<string>",
+                      "code": "<string>"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden (No Permission)",
             "content": {
               "application/json": {
                 "example": {
@@ -2382,21 +2382,6 @@
               }
             }
           },
-          "403": {
-            "description": "Forbidden (No Permission)",
-            "content": {
-              "application/json": {
-                "example": {
-                  "errors": [
-                    {
-                      "detail": "<string>",
-                      "code": "<string>"
-                    }
-                  ]
-                }
-              }
-            }
-          },
           "401": {
             "description": "Unauthorized",
             "content": {
@@ -2414,6 +2399,21 @@
           },
           "404": {
             "description": "Not Found",
+            "content": {
+              "application/json": {
+                "example": {
+                  "errors": [
+                    {
+                      "detail": "<string>",
+                      "code": "<string>"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden (No Permission)",
             "content": {
               "application/json": {
                 "example": {
@@ -2521,21 +2521,6 @@
               }
             }
           },
-          "403": {
-            "description": "Forbidden (No Permission)",
-            "content": {
-              "application/json": {
-                "example": {
-                  "errors": [
-                    {
-                      "detail": "<string>",
-                      "code": "<string>"
-                    }
-                  ]
-                }
-              }
-            }
-          },
           "401": {
             "description": "Unauthorized",
             "content": {
@@ -2553,6 +2538,21 @@
           },
           "404": {
             "description": "Not Found",
+            "content": {
+              "application/json": {
+                "example": {
+                  "errors": [
+                    {
+                      "detail": "<string>",
+                      "code": "<string>"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden (No Permission)",
             "content": {
               "application/json": {
                 "example": {
@@ -2662,21 +2662,6 @@
               }
             }
           },
-          "403": {
-            "description": "Forbidden (No Permission)",
-            "content": {
-              "application/json": {
-                "example": {
-                  "errors": [
-                    {
-                      "detail": "<string>",
-                      "code": "<string>"
-                    }
-                  ]
-                }
-              }
-            }
-          },
           "401": {
             "description": "Unauthorized",
             "content": {
@@ -2694,6 +2679,21 @@
           },
           "404": {
             "description": "Not Found",
+            "content": {
+              "application/json": {
+                "example": {
+                  "errors": [
+                    {
+                      "detail": "<string>",
+                      "code": "<string>"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden (No Permission)",
             "content": {
               "application/json": {
                 "example": {
@@ -2803,21 +2803,6 @@
               }
             }
           },
-          "403": {
-            "description": "Forbidden (No Permission)",
-            "content": {
-              "application/json": {
-                "example": {
-                  "errors": [
-                    {
-                      "detail": "<string>",
-                      "code": "<string>"
-                    }
-                  ]
-                }
-              }
-            }
-          },
           "401": {
             "description": "Unauthorized",
             "content": {
@@ -2835,6 +2820,21 @@
           },
           "404": {
             "description": "Not Found",
+            "content": {
+              "application/json": {
+                "example": {
+                  "errors": [
+                    {
+                      "detail": "<string>",
+                      "code": "<string>"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden (No Permission)",
             "content": {
               "application/json": {
                 "example": {
@@ -2927,21 +2927,6 @@
           "200": {
             "description": "Operation Successful"
           },
-          "403": {
-            "description": "Forbidden (No Permission)",
-            "content": {
-              "application/json": {
-                "example": {
-                  "errors": [
-                    {
-                      "detail": "<string>",
-                      "code": "<string>"
-                    }
-                  ]
-                }
-              }
-            }
-          },
           "401": {
             "description": "Unauthorized",
             "content": {
@@ -2959,6 +2944,21 @@
           },
           "404": {
             "description": "Not Found",
+            "content": {
+              "application/json": {
+                "example": {
+                  "errors": [
+                    {
+                      "detail": "<string>",
+                      "code": "<string>"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden (No Permission)",
             "content": {
               "application/json": {
                 "example": {
@@ -3068,21 +3068,6 @@
               }
             }
           },
-          "403": {
-            "description": "Forbidden (No Permission)",
-            "content": {
-              "application/json": {
-                "example": {
-                  "errors": [
-                    {
-                      "detail": "<string>",
-                      "code": "<string>"
-                    }
-                  ]
-                }
-              }
-            }
-          },
           "401": {
             "description": "Unauthorized",
             "content": {
@@ -3100,6 +3085,21 @@
           },
           "404": {
             "description": "Not Found",
+            "content": {
+              "application/json": {
+                "example": {
+                  "errors": [
+                    {
+                      "detail": "<string>",
+                      "code": "<string>"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden (No Permission)",
             "content": {
               "application/json": {
                 "example": {
@@ -3194,21 +3194,6 @@
               }
             }
           },
-          "403": {
-            "description": "Forbidden (No Permission)",
-            "content": {
-              "application/json": {
-                "example": {
-                  "errors": [
-                    {
-                      "detail": "<string>",
-                      "code": "<string>"
-                    }
-                  ]
-                }
-              }
-            }
-          },
           "401": {
             "description": "Unauthorized",
             "content": {
@@ -3226,6 +3211,21 @@
           },
           "404": {
             "description": "Not Found",
+            "content": {
+              "application/json": {
+                "example": {
+                  "errors": [
+                    {
+                      "detail": "<string>",
+                      "code": "<string>"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden (No Permission)",
             "content": {
               "application/json": {
                 "example": {
@@ -4770,7 +4770,7 @@
             ]
           },
           "country_code": {
-            "pattern": "(?i)^[A-Z]{2}$",
+            "pattern": "^[A-Z]{2}$",
             "type": "string",
             "description": "Recipient bank country code",
             "example": "CN"
