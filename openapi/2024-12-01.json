@@ -103,16 +103,6 @@
               }
             }
           },
-          "default": {
-            "description": "default response",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/TransferDetailsRespVo"
-                }
-              }
-            }
-          },
           "403": {
             "description": "Forbidden (No Permission)",
             "content": {
@@ -139,6 +129,16 @@
                       "code": "<string>"
                     }
                   ]
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "default response",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/TransferDetailsRespVo"
                 }
               }
             }
@@ -3017,168 +3017,141 @@
         },
         "description": "错误响应结果"
       },
-      "AccountType": {
-        "required": [
-          "account_type"
-        ],
-        "type": "object",
-        "properties": {
-          "account_type": {
-            "type": "string"
-          }
-        },
-        "description": "Payment details",
-        "discriminator": {
-          "propertyName": "account_type",
-          "mapping": {
-            "bank": "#/components/schemas/BankAccount",
-            "crypto": "#/components/schemas/CryptoAccount"
-          }
-        },
-        "oneOf": [
-          {
-            "$ref": "#/components/schemas/BankAccount"
-          },
-          {
-            "$ref": "#/components/schemas/CryptoAccount"
-          }
-        ]
-      },
       "BankAccount": {
         "required": [
           "account_currency",
           "account_name",
           "account_number",
+          "account_type",
           "bank_name",
           "country_code",
           "network",
           "swift_code"
         ],
         "type": "object",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/AccountType"
+        "properties": {
+          "account_type": {
+            "type": "string",
+            "description": "Account Type",
+            "enum": [
+              "bank"
+            ]
           },
-          {
-            "type": "object",
-            "properties": {
-              "bank_name": {
-                "maxLength": 128,
-                "minLength": 2,
-                "type": "string",
-                "description": "Bank Name",
-                "example": "JPMorgan Chase"
-              },
-              "network": {
-                "maxLength": 32,
-                "minLength": 2,
-                "pattern": "^(SWIFT|ACH|SEPA|RTGS|FPS)$",
-                "type": "string",
-                "description": "Network",
-                "example": "SWIFT"
-              },
-              "payment_method": {
-                "pattern": "^(INTERNATIONAL_WIRE|LOCAL)$",
-                "type": "string",
-                "description": "Payment Method",
-                "example": "INTERNATIONAL_WIRE"
-              },
-              "account_name": {
-                "maxLength": 128,
-                "minLength": 2,
-                "type": "string",
-                "description": "Account Name"
-              },
-              "account_number": {
-                "maxLength": 64,
-                "minLength": 8,
-                "pattern": "^[A-Z0-9]+$",
-                "type": "string",
-                "description": "Account Number"
-              },
-              "swift_code": {
-                "maxLength": 11,
-                "minLength": 8,
-                "pattern": "^[A-Z]{6}[A-Z0-9]{2}([A-Z0-9]{3})?$",
-                "type": "string",
-                "description": "SWIFT/BIC Code"
-              },
-              "account_currency": {
-                "maxLength": 3,
-                "minLength": 3,
-                "type": "string",
-                "description": "Account Currency",
-                "example": "USD"
-              },
-              "country_code": {
-                "pattern": "^[A-Z]{2}$",
-                "type": "string",
-                "description": "Country Code",
-                "example": "CN"
-              },
-              "local_bank_code": {
-                "maxLength": 23,
-                "minLength": 3,
-                "type": "string",
-                "description": "Local Bank Code"
-              }
-            }
+          "bank_name": {
+            "maxLength": 128,
+            "minLength": 2,
+            "type": "string",
+            "description": "Bank Name",
+            "example": "JPMorgan Chase"
+          },
+          "network": {
+            "maxLength": 32,
+            "minLength": 2,
+            "pattern": "^(SWIFT|ACH|SEPA|RTGS|FPS)$",
+            "type": "string",
+            "description": "Network",
+            "example": "SWIFT"
+          },
+          "payment_method": {
+            "pattern": "^(INTERNATIONAL_WIRE|LOCAL)$",
+            "type": "string",
+            "description": "Payment Method",
+            "example": "INTERNATIONAL_WIRE"
+          },
+          "account_name": {
+            "maxLength": 128,
+            "minLength": 2,
+            "type": "string",
+            "description": "Account Name"
+          },
+          "account_number": {
+            "maxLength": 64,
+            "minLength": 8,
+            "pattern": "^[A-Z0-9]+$",
+            "type": "string",
+            "description": "Account Number"
+          },
+          "swift_code": {
+            "maxLength": 11,
+            "minLength": 8,
+            "pattern": "^[A-Z]{6}[A-Z0-9]{2}([A-Z0-9]{3})?$",
+            "type": "string",
+            "description": "SWIFT/BIC Code"
+          },
+          "account_currency": {
+            "maxLength": 3,
+            "minLength": 3,
+            "type": "string",
+            "description": "Account Currency",
+            "example": "USD"
+          },
+          "country_code": {
+            "pattern": "^[A-Z]{2}$",
+            "type": "string",
+            "description": "Country Code",
+            "example": "CN"
+          },
+          "local_bank_code": {
+            "maxLength": 23,
+            "minLength": 3,
+            "type": "string",
+            "description": "Local Bank Code"
           }
-        ]
+        }
       },
       "CryptoAccount": {
         "required": [
+          "account_type",
           "currency",
           "network",
           "wallet_address",
           "wallet_name"
         ],
         "type": "object",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/AccountType"
+        "properties": {
+          "account_type": {
+            "type": "string",
+            "description": "Account Type",
+            "enum": [
+              "crypto"
+            ]
           },
-          {
-            "type": "object",
-            "properties": {
-              "wallet_name": {
-                "maxLength": 128,
-                "minLength": 2,
-                "type": "string",
-                "description": "Wallet Name"
-              },
-              "wallet_address": {
-                "maxLength": 64,
-                "minLength": 26,
-                "pattern": "^[a-zA-Z0-9]+$",
-                "type": "string",
-                "description": "Wallet Address"
-              },
-              "network": {
-                "maxLength": 32,
-                "minLength": 2,
-                "pattern": "^(ETH|TRX)$",
-                "type": "string",
-                "description": "Blockchain Network",
-                "example": "ETH",
-                "enum": [
-                  "ETH,TRX"
-                ]
-              },
-              "currency": {
-                "maxLength": 10,
-                "minLength": 2,
-                "pattern": "^[A-Z0-9]+$",
-                "type": "string",
-                "description": "Currency",
-                "example": "USDT",
-                "enum": [
-                  "USDT,USDC"
-                ]
-              }
-            }
+          "wallet_name": {
+            "maxLength": 128,
+            "minLength": 2,
+            "type": "string",
+            "description": "Wallet Name"
+          },
+          "wallet_address": {
+            "maxLength": 64,
+            "minLength": 26,
+            "pattern": "^[a-zA-Z0-9]+$",
+            "type": "string",
+            "description": "Wallet Address"
+          },
+          "network": {
+            "maxLength": 32,
+            "minLength": 2,
+            "pattern": "^(ETH|TRX)$",
+            "type": "string",
+            "description": "Blockchain Network",
+            "example": "ETH",
+            "enum": [
+              "ETH,TRX"
+            ]
+          },
+          "currency": {
+            "maxLength": 10,
+            "minLength": 2,
+            "pattern": "^[A-Z0-9]+$",
+            "type": "string",
+            "description": "Currency",
+            "example": "USDT",
+            "enum": [
+              "USDT,USDC"
+            ]
           }
-        ]
+        }
       },
       "Source": {
         "required": [
@@ -3413,6 +3386,14 @@
             "$ref": "#/components/schemas/address_info"
           },
           "payment_details": {
+            "description": "Payment details",
+            "discriminator": {
+              "propertyName": "account_type",
+              "mapping": {
+                "bank": "#/components/schemas/BankAccount",
+                "crypto": "#/components/schemas/CryptoAccount"
+              }
+            },
             "oneOf": [
               {
                 "$ref": "#/components/schemas/BankAccount"
@@ -3465,6 +3446,7 @@
           "purpose_code": {
             "maxLength": 64,
             "minLength": 0,
+            "pattern": "^(Payment for Physical Goods|Other)$",
             "type": "string",
             "description": "Payment purpose code",
             "example": "Payment for Physical Goods",
@@ -3992,7 +3974,22 @@
             "$ref": "#/components/schemas/AddressInfo"
           },
           "payment_details": {
-            "$ref": "#/components/schemas/AccountType"
+            "description": "Payment details",
+            "discriminator": {
+              "propertyName": "account_type",
+              "mapping": {
+                "bank": "#/components/schemas/BankAccount",
+                "crypto": "#/components/schemas/CryptoAccount"
+              }
+            },
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/BankAccount"
+              },
+              {
+                "$ref": "#/components/schemas/CryptoAccount"
+              }
+            ]
           },
           "file_id_list": {
             "maxItems": 10,
@@ -4250,6 +4247,14 @@
             "$ref": "#/components/schemas/address_info"
           },
           "payment_details": {
+            "description": "Payment details",
+            "discriminator": {
+              "propertyName": "account_type",
+              "mapping": {
+                "bank": "#/components/schemas/BankAccount",
+                "crypto": "#/components/schemas/CryptoAccount"
+              }
+            },
             "oneOf": [
               {
                 "$ref": "#/components/schemas/BankAccount"
@@ -4324,6 +4329,14 @@
             "$ref": "#/components/schemas/address_info"
           },
           "payment_details": {
+            "description": "Payment details",
+            "discriminator": {
+              "propertyName": "account_type",
+              "mapping": {
+                "bank": "#/components/schemas/BankAccount",
+                "crypto": "#/components/schemas/CryptoAccount"
+              }
+            },
             "oneOf": [
               {
                 "$ref": "#/components/schemas/BankAccount"
@@ -4347,7 +4360,6 @@
       },
       "FxQuoteV20241201ReqVo": {
         "required": [
-          "country_code",
           "source_currency",
           "target_currency"
         ],
@@ -4416,8 +4428,9 @@
           "country_code": {
             "pattern": "^[A-Z]{2}$",
             "type": "string",
-            "description": "Payout country code",
-            "example": "CN"
+            "description": "Payout country code. Defaults to CN when omitted.",
+            "example": "CN",
+            "default": "CN"
           }
         }
       },
